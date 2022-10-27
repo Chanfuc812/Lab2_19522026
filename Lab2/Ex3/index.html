@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<title>Drum` Drum Drum' </title>
+<style>
+    .container {
+  position: relative;
+  text-align: center;
+  color: white;
+
+}
+
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.btn{
+    margin-left: 40px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:red;
+  font-size: 40px;
+}
+
+.centered_temp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:black;
+  font-size: 40px;
+}
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body style="  background-color:purple">
+        
+        <div>
+        <div style="text-align:center;font-size:60px;color:lightcoral">
+            <h1>Drum 🥁 Kit</h1>
+        </div>
+        <div style="display:flex">
+            <button id="Z" class="btn" onclick="myFunctionZ()">
+                <div class="container">
+                    <img src="crash.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered">Z</div>
+                    <audio id="audioZ" src="crash.mp3"></audio>
+                </div>
+            </button>
+
+            <button class="btn" onclick="myFunctionX()">
+                <div class="container">
+                    <img src="kick.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered">X</div>
+                    <audio id="audioX" src="kick-bass.mp3"></audio>
+                </div>
+            </button>
+
+            <button class="btn" onclick="myFunctionC()">
+                <div class="container">
+                    <img src="snare.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered">C</div>
+                    <audio id="audioC" src="snare.mp3"></audio>
+                </div>
+            </button>
+
+            <button class="btn" onclick="myFunctionV()">
+                <div class="container">
+                    <img src="tom1.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered_temp">V</div>
+                    <audio id="audioV" src="tom-1.mp3"></audio>
+                </div>
+            </button>
+
+            <button class="btn" onclick="myFunctionB()">
+                <div class="container">
+                    <img src="tom2.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered_temp">B</div>
+                    <audio id="audioB" src="tom-2.mp3"></audio>
+                </div>
+            </button>
+            <button class="btn" onclick="myFunctionN()">
+                <div class="container">
+                    <img src="tom3.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered_temp">N</div>
+                    <audio id="audioN" src="tom-3.mp3"></audio>
+                </div>
+            </button>
+            <button class="btn" onclick="myFunctionM()">
+                <div class="container">
+                    <img src="tom4.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered_temp">M</div>
+                    <audio id="audioM" src="tom-4.mp3"></audio>
+                </div>
+            </button>
+        </div>
+            <div style="display:block">
+            </div>
+            <p id="log"></p>
+        </div>
+        <script>
+            function myFunctionZ() {
+                var audio = document.getElementById("audioZ");
+                 audio.play();
+            }
+
+            function myFunctionX() {
+                var audio = document.getElementById("audioX");
+                 audio.play();
+            }
+
+            function myFunctionC() {
+                var audio = document.getElementById("audioC");
+                 audio.play();
+            }
+            function myFunctionV() {
+                var audio = document.getElementById("audioV");
+                 audio.play();
+            }
+            function myFunctionB() {
+                var audio = document.getElementById("audioB");
+                 audio.play();
+            }
+            function myFunctionN() {
+                var audio = document.getElementById("audioN");
+                 audio.play();
+            }
+            function myFunctionM() {
+                var audio = document.getElementById("audioM");
+                 audio.play();
+            }
+            function onKeyPress(){
+
+            }
+
+            const log = document.getElementById('log');
+            const input = document.querySelector('input');
+
+            const test = document.addEventListener('keypress', musicKeyPress);
+
+            function musicKeyPress(e) {
+                switch(e.code[3]) {
+                    case "Z":
+                        myFunctionZ()
+
+                     break;
+                    case "X":
+                        myFunctionX()
+                     break;
+                    case "C":
+                        myFunctionC()
+                     break;
+                    case "V":
+                        myFunctionV()
+                     break;
+                    case "B":
+                        myFunctionB()
+                     break;
+                    case "N":
+                        myFunctionN()
+                     break;
+                    case "M":
+                        myFunctionM()
+                     break;
+                     case "H":
+                        myFunctionH()
+                     break;
+                 default:
+                
+                }
+            }
+        </script>
+    </body>
+</html>
